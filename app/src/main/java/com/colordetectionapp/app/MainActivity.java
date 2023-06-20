@@ -2,18 +2,25 @@ package com.colordetectionapp.app;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -33,15 +40,15 @@ public class MainActivity extends AppCompatActivity
     ImageView imageview;
     Button button;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
 
 
-        imageview = findViewById(R.id.imageview);
+
+
+
         button = findViewById(R.id.camera);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -54,9 +61,18 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        setContentView(R.layout.activity2);
+        imageview = findViewById(R.id.display);
 
+        if(requestCode==request_code){
+            Bitmap imgbitmap = (Bitmap)data.getExtras().get("data");
+            imageview.setImageBitmap(imgbitmap);
 
-
+        }
+    }
 }
 
 
