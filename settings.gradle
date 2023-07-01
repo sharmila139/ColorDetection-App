@@ -16,3 +16,4 @@ rootProject.name = "Color Detection App"
 include ':app'
 include ':java'
 
+include ':sdk'

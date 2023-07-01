@@ -20,7 +20,8 @@ import android.widget.ImageView;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
-
+import org.opencv.android.OpenCVLoader;
+import org.opencv.engine.OpenCVEngineInterface;
 
 
 public class MainActivity extends AppCompatActivity
@@ -44,6 +45,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
+        if (!OpenCVLoader.initDebug()) {
+            // OpenCV initialization failed
+            Log.e("MainActivity", "OpenCV not loaded");
+        } else {
+            // OpenCV successfully loaded
+            Log.d("MainActivity", "OpenCV loaded");
+        }
 
 
 
