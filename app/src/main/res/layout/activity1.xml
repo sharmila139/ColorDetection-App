@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cda_background"
+    android:background="@drawable/background"
     android:visibility="visible"
     tools:context=".MainActivity">
 
@@ -12,53 +12,38 @@
         android:id="@+id/textView"
         android:layout_width="275dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="75dp"
+        android:layout_alignParentTop="true"
 
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="70dp"
-        android:fontFamily="@font/amarante"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="227dp"
+
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Color Detection App"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="italic"
         android:shadowColor="#808080"
-        android:shadowDx="60"
-        android:shadowDy="50"
-        android:shadowRadius="50"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        />
+        android:shadowRadius="10"
+        android:text="Color Detection App"
+        android:textColor="#159895"
+        android:textSize="35sp"
+        android:textStyle="italic"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="41dp"
-
-
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="328dp"
+        android:background="@drawable/button_background"
+        android:elevation="4dp"
+        android:fontFamily="@font/amarante"
+        android:foreground="?attr/selectableItemBackground"
         android:gravity="center_horizontal"
         android:text="camera"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        />
-
-
-
-
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

@@ -4,22 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/imageview_cda"
     android:visibility="visible"
     tools:context=".MainActivity">
-
-
 
 
     <ImageView
         android:id="@+id/display"
         android:layout_width="500dp"
         android:layout_height="400dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="10dp"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop" />
 
+    <TextView
+        android:id="@+id/colorTextView"
+        android:layout_width="274dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/display"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#159895"
+        android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="45dp"
+        android:onClick="goBackToActivity1"
+        android:text="Back" />
 
 
 </RelativeLayout>
