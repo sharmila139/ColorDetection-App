@@ -207,7 +207,42 @@ public class MainActivity extends AppCompatActivity {
 
         // Analyze the color distribution
         analyzeColorDistribution(hsvDatasetHistogram, hsvImageHistogram);
+
+        // Get the majority color from uniqueColorNames
+        String majorityColor = getMajorityColor();
+
+        // Set the majority color in the majorityColorTextView
+        TextView majorityColorTextView = findViewById(R.id.majorityColorTextView);
+        majorityColorTextView.setText("Majority Color: " + majorityColor);
     }
+
+    private String getMajorityColor() {
+        // Find the color with the maximum occurrence
+        Map<String, Integer> colorOccurrences = new HashMap<>();
+        for (String colorName : uniqueColorNames) {
+            if (colorOccurrences.containsKey(colorName)) {
+                int count = colorOccurrences.get(colorName);
+                colorOccurrences.put(colorName, count + 1);
+            } else {
+                colorOccurrences.put(colorName, 1);
+            }
+        }
+
+        // Find the color with the maximum occurrence
+        int maxCount = 0;
+        String majorityColor = "";
+        for (Map.Entry<String, Integer> entry : colorOccurrences.entrySet()) {
+            String colorName = entry.getKey();
+            int count = entry.getValue();
+            if (count > maxCount) {
+                maxCount = count;
+                majorityColor = colorName;
+            }
+        }
+
+        return majorityColor;
+    }
+
 
     // for loaded image
     private int[] calculateHistogram2(Bitmap hsvBitmap) {

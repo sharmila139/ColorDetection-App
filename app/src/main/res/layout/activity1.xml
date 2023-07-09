@@ -15,8 +15,8 @@
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
-        android:layout_marginTop="227dp"
 
+        android:layout_marginTop="227dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:shadowColor="#808080"
@@ -34,8 +34,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginEnd="138dp"
-        android:layout_marginBottom="328dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="332dp"
         android:background="@drawable/button_background"
         android:elevation="4dp"
         android:fontFamily="@font/amarante"

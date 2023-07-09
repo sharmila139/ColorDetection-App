@@ -18,15 +18,30 @@
         android:layout_marginTop="0dp"
         android:scaleType="centerCrop" />
 
+
     <TextView
         android:id="@+id/colorTextView"
-        android:layout_width="274dp"
-        android:layout_height="match_parent"
+        android:layout_width="169dp"
+        android:layout_height="236dp"
         android:layout_below="@id/display"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="11dp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="#159895"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/majorityColorTextView"
+        android:layout_width="167dp"
+        android:layout_height="226dp"
+        android:layout_below="@id/colorTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-234dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/amarante"
+        android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <Button
